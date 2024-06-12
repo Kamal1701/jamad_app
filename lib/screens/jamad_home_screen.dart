@@ -8,6 +8,14 @@ class JamadHomeScreen extends StatefulWidget {
 }
 
 class _JamadHomeScreenState extends State<JamadHomeScreen> {
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,7 +48,7 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
               ),
               ListTile(
                 // leading: Icon(Icons.home),
-                title: const Text('பெண் பயான்'),
+                title: const Text('பெண்கள் பயான்'),
                 onTap: () {
                   Navigator.pop(context);
                   // Handle the tap here.
@@ -72,6 +80,25 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
               ),
             ],
           ),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'முகப்பு',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              label: 'நிர்வாகிகள்',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.contact_mail),
+              label: 'எங்களை தொடர்பு கொள்ளுங்கள்',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.amber[800],
+          onTap: _onItemTapped,
         ),
       ),
     );

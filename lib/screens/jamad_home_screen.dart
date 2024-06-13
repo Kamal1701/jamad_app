@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:jamad_app/screens/jamad_about_us_page_screen.dart';
+import 'package:jamad_app/screens/jamad_calendar_page_screen.dart';
+import 'package:jamad_app/screens/jamad_contact_page_screen.dart';
+import 'package:jamad_app/screens/jamad_contactus_page_screen.dart';
+import 'package:jamad_app/screens/jamad_home_page_screen.dart';
+import 'package:jamad_app/screens/jamad_madarasa_page_screen.dart';
+import 'package:jamad_app/screens/jamad_pengal_bayan_screen.dart';
 
 class JamadHomeScreen extends StatefulWidget {
   const JamadHomeScreen({super.key});
@@ -9,6 +16,12 @@ class JamadHomeScreen extends StatefulWidget {
 
 class _JamadHomeScreenState extends State<JamadHomeScreen> {
   int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    const JamadHomePageScreen(),
+    const JamadContantPageScreen(),
+    const JamadCalendarPageScreen(),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -51,7 +64,11 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
                 title: const Text('பெண்கள் பயான்'),
                 onTap: () {
                   Navigator.pop(context);
-                  // Handle the tap here.
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const JamadPengalBayanScreen()),
+                  );
                 },
               ),
               ListTile(
@@ -59,7 +76,11 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
                 title: const Text('மதராசா'),
                 onTap: () {
                   Navigator.pop(context);
-                  // Handle the tap here.
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const JamadMadarasaPageScreen()),
+                  );
                 },
               ),
               ListTile(
@@ -67,7 +88,11 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
                 title: const Text('Location'),
                 onTap: () {
                   Navigator.pop(context);
-                  // Handle the tap here.
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const JamadContactUsPageScreen()),
+                  );
                 },
               ),
               ListTile(
@@ -75,25 +100,30 @@ class _JamadHomeScreenState extends State<JamadHomeScreen> {
                 title: const Text('About Us'),
                 onTap: () {
                   Navigator.pop(context);
-                  // Handle the tap here.
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const JamadAboutUsPageScreen()),
+                  );
                 },
               ),
             ],
           ),
         ),
+        body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.house_rounded),
               label: 'முகப்பு',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: Icon(Icons.groups_2_rounded),
               label: 'நிர்வாகிகள்',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.contact_mail),
-              label: 'எங்களை தொடர்பு கொள்ளுங்கள்',
+              icon: Icon(Icons.access_time_filled),
+              label: 'ஜும்ஆ',
             ),
           ],
           currentIndex: _selectedIndex,

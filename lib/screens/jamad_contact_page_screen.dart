@@ -5,9 +5,14 @@ class JamadContantPageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: const Center(
-        child: Text('This is the contact page'),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("நிர்வாகிகள்"),
+        ),
+        body: Container(
+          child: const Center(child: Text("நிர்வாகிகள்")),
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jamad_app/screens/jamad_home_screen.dart';
 
 void main() {
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const JamadHomeScreen(),
+      home: JamadHomeScreen(),
       theme: ThemeData.light(useMaterial3: true),
     );
   }

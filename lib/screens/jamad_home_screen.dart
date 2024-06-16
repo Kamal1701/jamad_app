@@ -154,9 +154,6 @@ class JamadHomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Tamilnadu Thawood Jamad"),
-          actions: const <Widget>[
-            Text('data'),
-          ],
         ),
         drawer: Drawer(
           child: ListView(

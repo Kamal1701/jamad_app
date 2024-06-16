@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jamad_app/screens/jamad_branch_administer_page_screen.dart';
-import 'package:jamad_app/screens/jamad_pengal_bayan_screen.dart';
 
 class JamadContantPageScreen extends StatelessWidget {
   const JamadContantPageScreen({super.key});

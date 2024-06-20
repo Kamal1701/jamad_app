@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class JamadContactUsPageScreen extends StatefulWidget {
-  const JamadContactUsPageScreen({super.key});
+class JamadLocationPageScreen extends StatefulWidget {
+  const JamadLocationPageScreen({super.key});
 
   @override
-  State<JamadContactUsPageScreen> createState() =>
-      _JamadContactUsPageScreenState();
+  State<JamadLocationPageScreen> createState() =>
+      _JamadLocationPageScreenState();
 }
 
-class _JamadContactUsPageScreenState extends State<JamadContactUsPageScreen> {
+class _JamadLocationPageScreenState extends State<JamadLocationPageScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

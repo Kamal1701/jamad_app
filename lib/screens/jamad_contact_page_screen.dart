@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jamad_app/screens/jamad_branch_administer_page_screen.dart';
 
-class JamadContantPageScreen extends StatelessWidget {
-  const JamadContantPageScreen({super.key});
+class JamadContactPageScreen extends StatelessWidget {
+  const JamadContactPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
